@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+#heading {
+    text-align: center;
+    color: #000;
+    padding: 20px 0 20px 0;
+}
+
+#background-wrapper {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content-wrapper {
+    width: 100%;
+    height: fit-content;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: fit-content;
+}
+
+@media screen and (max-width: 680px){
+    #background-wrapper {
+        height: 110vh;
+    }
+    
+    #content-wrapper {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .wrapper {
+        width: 100%;
+        height: fit-content;
+    }
+}
+
+.card {
+    max-width: 300px;
+    min-height: 250px;
+    padding: 30px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin: 20px;
+
+
+    background: rgba(16, 15, 15, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.card-title {
+    margin-top: 0;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+}
+
+.card-content {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+    padding: 15px 0 15px 0;
+}
+
+.card-btn {
+    all: unset;
+    display: block;
+    margin-left: auto;
+    border: 2px solid #FFF;
+    padding: 10px 15px;
+    border-radius: 25px;
+    font-size: 10px;
+    font-weight: 600;
+    transition: all 0.5s;
+    cursor: pointer;
+    letter-spacing: 1.2px;
+}
+
+.card-btn:hover {
+    color: #000;
+    background: #FFF;
+}

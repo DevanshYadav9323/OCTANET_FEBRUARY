@@ -1,0 +1,74 @@
+.hero {
+    position: relative;
+    background: url('https://img.freepik.com/free-photo/travel-concept-with-landmarks_23-2149153256.jpg?w=1060&t=st=1707228891~exp=1707229491~hmac=6cc430c01aee03e96a42c12d63d7e24beb96994e76b5f54c7149561bb89d877d') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Black color with 60% opacity */
+    z-index: 1; /* Ensure the overlay is behind the content */
+}
+
+.hero-content {
+    text-align: center;
+    color: #fff;
+    z-index: 2; /* Ensure the content is on top of the overlay */
+}
+
+.hero-title {
+    font-size: 3em;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.hero-title span {
+    color:#ffcc00;
+}
+
+.hero-subtitle {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease-in-out 0.5s;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: #fff;
+    /* background-color: #3498db; */
+    border: 2px solid #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+
+    background: rgba(16, 15, 15, 0.4);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.hero-button:hover {
+    background-color: #2980b9;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
